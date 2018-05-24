@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    
+  <div class="row">
+    
+    <div class="col-xl-6 col-md-6 col-xs-12">
+      <div class="card">
+        <div class="card-header">
+          Daily alerts/Provider
+        </div>
+        <div class="">
+          
+          <div *ngIf="chart1">
+            <canvas id="canvas1">{{ chart1 }}</canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+        Status
+        </div>
+        <div class="card-body">
+          <div *ngIf="chart3">
+            <canvas id="canvas3">{{ chart3 }}</canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+        Total Alerts per state
+        </div>
+        <div class="card-body">
+          <div *ngIf="chart5">
+            <canvas id="canvas5">{{ chart5 }}</canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6 col-md-6 col-xs-12">
+      <div class="card">
+        <div class="card-header">
+          Daily alerts/States
+        </div>
+        <div class="">
+          <div *ngIf="chart2">
+            <canvas id="canvas2">{{ chart2 }}</canvas>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header">
+          All alerts, per provider
+        </div>
+        <div class="card-body">
+          <div *ngIf="chart4">
+            <canvas id="canvas4">{{ chart4 }}</canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

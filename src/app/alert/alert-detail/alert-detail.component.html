@@ -1,0 +1,46 @@
+<div class="container-fluid top-margin">
+  <div class="row">
+    <div class="col-xl-4 col-md-5 col-xs-12">
+      <div class="card">
+        <div class="card-header">
+          {{data?.address?.name}}
+        </div>
+        <div class="card-body">
+          <p>
+            <b>Address:</b> {{data?.address?.street_address}}, {{data?.address?.suburb}} {{data?.address?.postcode}} {{data?.address?.state}}
+          </p>
+
+          <p>
+            <b>Status: </b>{{data?.status}}</p>
+          <p>
+            <b>Provider: </b>{{data?.provider}}</p>
+          <p>
+            <b>Alerted: </b>{{data?.alerted | date}}</p>
+          <p>
+            <b>Responded: </b>{{data?.responded | date}}</p>
+        </div>
+        <div class="card-img-bottom">
+
+          <video width=50% height="170" controls (click)="toggleVideo()" #videoPlayer>
+            <source src="{{data?.video_url}}" type="video/webm"> Your browser does not support HTML5 video.
+          </video>
+
+
+          <img src="{{data?.image_url}}" alt="Card image" style="width:50%">
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8 col-md-7 col-xs-12">
+      <div class="card">
+        <div class="card-header">
+          <b>Location</b>
+        </div>
+        <div class="card-body">
+            <agm-map [latitude]="+data?.location?.latitude" [longitude]="+data?.location?.longitude">
+                <agm-marker [latitude]="+data?.location?.latitude" [longitude]="+data?.location?.longitude"></agm-marker>
+              </agm-map>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

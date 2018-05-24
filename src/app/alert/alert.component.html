@@ -1,0 +1,16 @@
+
+  <div class="card fixed-1" [ngClass]="data?.status" style="cursor:pointer;" (click)="redirect()">
+    <div class="card-header">
+      {{data?.address?.name}}
+    </div>
+    <div class="card-body">
+       <p>{{data?.address?.street_address}}</p>
+       <p>{{data?.address?.suburb}} {{data?.address?.postcode}} {{data?.address?.state}}</p>
+
+      <p><b>Provider: </b>{{data?.provider}}</p>
+      <p><b>Status: </b>{{data?.status}}</p>
+      <p><b>Alerted: </b>{{data?.alerted | date}}</p>
+      <p><a href="{{data?.image_url}}" target="_blank"><b>Image</b></a></p>
+      <p><a href="{{data?.video_url}}" target="_blank"><b>Video</b></a></p>
+      </div>
+  </div>

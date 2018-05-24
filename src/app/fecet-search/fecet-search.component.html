@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-10 col-md-3 col-xl-2">
+      <div class="card-top">
+        <app-fecet-field [key]="'state'"></app-fecet-field>
+      </div>
+      <div class="card-top">
+        <app-fecet-field [key]="'postcode'"></app-fecet-field>
+      </div>
+      <div class="card-top">
+        <app-fecet-field [key]="'suburb'"></app-fecet-field>
+      </div>
+      <div class="card-top">
+        <app-fecet-field [key]="'provider'"></app-fecet-field>
+      </div>
+      <div class="card-top">
+        <app-fecet-field [key]="'status'"></app-fecet-field>
+      </div>
+    </div>
+    <div class="col-xs-2 col-md-9 col-xl-10">
+      <div class="fixed-div" data-infinite-scroll debounce [infiniteScrollDistance]="scrollDistance" [infiniteScrollUpDistance]="scrollUpDistance"
+        [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()" (scrolledUp)="onUp()">
+        <div class="card-top">
+          Total number of results found: {{total_result}}
+        </div>
+        <div class="row">
+          <div *ngFor="let data of search_results" class="col-xs-10 col-md-6 col-xl-3 card-top">
+            <app-alert [data]="data"></app-alert>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-body">
+    Select {{key}}
+    <form [formGroup]="select_form">
+    <ng-select [items]="Fields$" [multiple]="true" [virtualScroll]="true" (scrollToEnd)="fetchMore($event)" [closeOnSelect]="false"
+      bindLabel="name" placeholder="Select {{key}}" formControlName="selectedFields" (focusout)="focusout()" [(ngModel)]="selectedFields">
+    </ng-select></form>
+  </div>
+</div>
