@@ -26,7 +26,7 @@ import { AgmCoreModule } from '@agm/core';
     RouterModule.forRoot(APP_ROUTES),
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAq9_Z3d2RhByFfRzwb43kROaUOjvoQof8'
+      apiKey: 'APP_SCRECT'
     }),
     NgSelectModule, HttpClientModule, InfiniteScrollModule
   ],
